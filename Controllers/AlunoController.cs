@@ -1,4 +1,5 @@
 ﻿using jpsegundomodulo.Data.Repositorio.Interfaces;
+using jpsegundomodulo.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace jpsegundomodulo.Controllers
@@ -19,6 +20,20 @@ namespace jpsegundomodulo.Controllers
         public IActionResult AdicionarAluno()
         {
             return View();
+        }
+
+        public IActionResult InserirAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.InserirAluno(aluno);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return RedirectToAction("index");
         }
     }
 }
