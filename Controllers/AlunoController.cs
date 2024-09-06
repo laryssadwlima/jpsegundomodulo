@@ -34,6 +34,24 @@ namespace jpsegundomodulo.Controllers
                 throw;
             }
             return RedirectToAction("index");
+
+        }
+
+        public IActionResult Editar(int id)
+        {
+            var aluno = _alunoRepositorio.BuscarId(id);
+            return View(aluno);
+        }
+        public IActionResult EditarAluno(Aluno aluno)
+        {
+            _alunoRepositorio.EditarAluno(aluno);
+            return RedirectToAction("index");
+        }
+
+        public IActionResult DeletarAluno(Aluno aluno) 
+        {
+            _alunoRepositorio.DeletarAluno(aluno);
+            return RedirectToAction("Index");
         }
     }
 }
