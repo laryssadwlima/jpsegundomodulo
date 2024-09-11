@@ -1,15 +1,10 @@
-﻿@model Aluno
+﻿@model Professor
 
-<form asp-controller="Aluno" asp-action="InserirAluno" method="post">
+<form asp-controller="Aluno" asp-action="EditarProfessor" method="post">
 
     <div class="mb-3 col-md-6">
         <label class="form-label">Nome</label>
         <input type="text" asp-for="Nome" class="form-control">
-    </div>
-
-    <div class="mb-3 col-md-6">
-        <label class="form-label">Matricula</label>
-        <input type="text" asp-for="Matricula" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
@@ -18,13 +13,13 @@
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Curso</label>
-        <input type="text" asp-for="Curso" class="form-control">
+        <label class="form-label">Area de Atuaçã</label>
+        <input type="text" asp-for="Area_atuacao" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Periodo</label>
-        <input type="number" asp-for="Periodo" class="form-control">
+        <label class="form-label">Disciplina</label>
+        <input type="number" asp-for="Disciplina" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
@@ -33,8 +28,13 @@
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Data de Nascimento</label>
-        <input type="date" asp-for="DataNascimento" class="form-control">
+        <label class="form-label">Status</label>
+        <input type="date" asp-for="StatusProfessor" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-6">
+        <label class="form-label">Formação</label>
+        <input type="email" asp-for="Formacao_academica" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">

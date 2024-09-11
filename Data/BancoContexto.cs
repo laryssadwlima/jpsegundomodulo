@@ -17,5 +17,6 @@ namespace jpsegundomodulo.Data
         }
 
         public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Professor> Professor { get; set; }
     }
 }
