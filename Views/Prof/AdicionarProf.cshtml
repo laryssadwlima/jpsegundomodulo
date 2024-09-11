@@ -1,15 +1,10 @@
-﻿@model Aluno
+﻿@model Prof
 
-<form asp-controller="Aluno" asp-action="InserirAluno" method="post">
+<form asp-controller="Prof" asp-action="InserirProf" method="post">
 
     <div class="mb-3 col-md-6">
         <label class="form-label">Nome</label>
         <input type="text" asp-for="Nome" class="form-control">
-    </div>
-
-    <div class="mb-3 col-md-6">
-        <label class="form-label">Matricula</label>
-        <input type="text" asp-for="Matricula" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
@@ -18,9 +13,14 @@
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Curso</label>
-        <select asp-for="Curso" class="form-control">
-            <option value="">Selecione um curso</option>
+        <label class="form-label">Area de Atuação</label>
+        <input type="text" asp-for="Atuacao" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-6">
+        <label class="form-label">Disciplina</label>
+        <select asp-for="Disciplina" class="form-control">
+            <option value="">Selecione a Disciplina</option>
             <option value="Costura">Costura</option>
             <option value="Enfermagem">Enfermagem</option>
             <option value="Informática Básica">Informática Básica</option>
@@ -32,26 +32,8 @@
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Período</label>
-        <select asp-for="Periodo" class="form-control">
-            <option value="">Selecione o período</option>
-            <option value="1">1º Período</option>
-            <option value="2">2º Período</option>
-            <option value="3">3º Período</option>
-            <option value="4">4º Período</option>
-            <option value="5">5º Período</option>
-            <option value="6">6º Período</option>
-        </select>
-    </div>
-
-    <div class="mb-3 col-md-6">
         <label class="form-label">Email</label>
         <input type="email" asp-for="Email" class="form-control">
-    </div>
-
-    <div class="mb-3 col-md-6">
-        <label class="form-label">Data de Nascimento</label>
-        <input type="date" asp-for="DataNascimento" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
@@ -60,22 +42,26 @@
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">Status</label>
-        <select asp-for="StatusAluno" class="form-control">
-            <option value="">Selecione o status</option>
-            <option value="Ativo">Ativo</option>
-            <option value="Formado">Formado</option>
-            <option value="Afastado">Afastado</option>
-        </select>
+        <label class="form-label">CEP</label>
+        <input type="text" asp-for="CEP" class="form-control">
     </div>
 
     <div class="mb-3 col-md-6">
-        <label class="form-label">CEP</label>
-        <input type="text" asp-for="Cep" class="form-control">
+        <label class="form-label">Status</label>
+        <select asp-for="StatusProfessor" class="form-control">
+            <option value="">Selecione o status</option>
+            <option value="Ativo">Ativo</option>
+            <option value="Aposentado">Aposentado</option>
+            <option value="Afastado">Afastado</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-6">
+        <label class="form-label">Formacao</label>
+        <input type="text" asp-for="Formacao" class="form-control">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
         <button type="submit" class="btn btn-success">Adicionar</button>
         <button type="button" class="btn btn-primary" onclick="window.history.back();">Voltar</button>
-    </div>>
+    </div>
 </form>
